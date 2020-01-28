@@ -1,0 +1,145 @@
+﻿<Window x:Class="MeineSammlungen_2.ShowIPTC"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MeineSammlungen_2"
+        mc:Ignorable="d"
+        Title="Metadaten" Height="750" Width="800" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="DimGray" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Margin"  Value="4 2 2 2"/>
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="Padding" Value="2"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Margin"  Value="4 2 5 2"/>
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="Padding" Value="2"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <Label Content="IPTC-Daten" FontWeight="Bold" />
+        <StackPanel Grid.Column="0" Grid.Row="1" Background="Bisque" >
+            <Label Content="Objekt"/>
+            <TextBox x:Name="txtObject" TextWrapping="Wrap" ToolTip="Qbjekt aus Grunddaten"/>
+            <Label Content="Detail"/>
+            <TextBox x:Name="txtDetail" TextWrapping="Wrap" ToolTip="Detail aus Grunddaten"/>
+            <Label Content="Quelle"/>
+
+            <TextBlock x:Name="txtQuelle" />
+            <Label Content="Quelle ändern in..."/>
+            <ComboBox x:Name="cbQuelle" SelectionChanged="cbQuelle_SelectionChanged" />
+
+            <Label Content="Hinweise zur Quelle"/>
+            <TextBox x:Name="txtSpezial" TextWrapping="Wrap" ToolTip="z.B. 'Negativ-Nr., WebSite, Dateiname u.ä."/>
+            <Label Content="Ort"/>
+            <TextBox x:Name="txtOrt" TextWrapping="Wrap" ToolTip="Ort der Herkunft des Objekts"/>
+            <Label Content="Bundesland/Country"/>
+            <TextBox x:Name="txtCountry" TextWrapping="Wrap"/>
+            <Label Content="Land"/>
+            <TextBox x:Name="txtLand" TextWrapping="Wrap"/>
+            <Label Content="Position"/>
+            <TextBox x:Name="txtPosition" TextWrapping="Wrap"/>
+
+
+            <Label Content="Hinweise"/>
+            <TextBlock x:Name="txtHinweise" ToolTip="Hinweis auf DB-Nummer"/>
+
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <Label Content="Bemerkung (IPTC)"/>
+            <TextBox x:Name="txtBemerkung" TextWrapping="Wrap" ToolTip="Bemerkung aus Grunddaten"/>
+            <Label Content="Erstellt"/>
+            <UniformGrid Columns="2">
+                <TextBox x:Name="txtErstellt"/>
+                <DatePicker x:Name="txtErstelltPicker" SelectedDateChanged="DatePicker_SelectedDateChanged"  />
+            </UniformGrid>
+            <Label Content="Digital Erstellt"/>
+            <TextBlock x:Name="txtDErstellt"/>
+            <Label Content="Autor"/>
+            <TextBox x:Name="txtAutor"/>
+            <Label Content="CopyRight"/>
+            <TextBox x:Name="txtCRight"/>
+            <Label Content="Stichworte"/>
+            <TextBlock x:Name="txtStichworte"/>
+            <ListBox x:Name="listStichwort" Background="AliceBlue"/>
+            <!--<ComboBox x:Name="cbStichworte" IsEditable="True"/>-->
+            <Label Content="Stichwort hinzufügen"/>
+            <TextBox x:Name="txtAddStichworte"/>
+            <Button Content="Add" Click="Button_Click" />
+            <Button Content="Del" Click="Button_Del_Click" />
+        </StackPanel>
+        <Grid Grid.Column="2" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" x:Name="ImgDisplay" Margin="5 5 5 5" Height="150"/>
+            <StackPanel Grid.Row="1" Background="AliceBlue">
+                <UniformGrid Grid.Row="2" Grid.Column="1" Columns="2">
+                    <Label Content="Kamera:"/>
+                    <TextBlock Margin="0 5 0 5" x:Name="txtKamera"/>
+                </UniformGrid>
+                <UniformGrid Grid.Row="2" Grid.Column="1" Columns="2">
+                    <Label Content="Blende:"/>
+                    <TextBlock Margin="0 5 0 5" x:Name="txtBlende"/>
+                </UniformGrid>
+                <UniformGrid Grid.Row="2" Grid.Column="1" Columns="2">
+                    <Label Content="Belichtungszeit:"/>
+                    <TextBlock Margin="0 5 0 5" x:Name="txtBelichtung"/>
+                </UniformGrid>
+                <UniformGrid Grid.Row="2" Grid.Column="1" Columns="2">
+                    <Label Content="ISO-Wert:"/>
+                    <TextBlock Margin="0 5 0 5" x:Name="txtISO"/>
+                </UniformGrid>
+                <UniformGrid Grid.Row="2" Grid.Column="1" Columns="2">
+                    <Label Content="Brennweite:"/>
+                    <TextBlock Margin="0 5 0 5" x:Name="txtBrennweite"/>
+                </UniformGrid>
+                <UniformGrid Grid.Row="2" Grid.Column="1" Columns="2">
+                    <Label Content="Datum der Aufnahme:"/>
+                    <TextBlock Margin="0 5 0 5" x:Name="txtAufnahmeDat"/>
+                </UniformGrid>
+                <Border BorderBrush="Aqua" BorderThickness="1" Margin="5 15 5 5">
+                    <StackPanel>
+                        <Label Content="GPS-Daten" FontWeight="Bold"/>
+                        <Label Content="Latitude" x:Name="txtLat"/>
+                        <Label Content="Latitude (Dezimal)" x:Name="txtLatDez"/>
+                        <Label Content="Longitude" x:Name="txtLong"/>
+
+                        <Label Content="Longitude (Dezimal)" x:Name="txtLongDez"/>
+                        <Label Content="Altitude" x:Name="txtAlt"/>
+                        <Button Content="Nach IPTC-Position übernehmen" Margin="5 10 5 2 " Name="btnToIptc" Click="btn_ToIptc_clilck"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+
+        </Grid>
+        <Button Grid.Column="1" Grid.Row="2" x:Name="BtnSave" Content="Änderungen übernehmen" Click="BtSaveClick"/>
+        <Button Grid.Column="2" Grid.Row="2" x:Name="BtnExit" Content="Zurück ohne Änderung" Click="BtExitClick"/>
+        <Button Grid.Column="0" Grid.Row="2" x:Name="BtnAdd" Content="Grunddaten einfügen" Click="BtAddClick"/>
+    </Grid>
+</Window>

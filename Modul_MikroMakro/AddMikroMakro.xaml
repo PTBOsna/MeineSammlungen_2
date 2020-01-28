@@ -1,0 +1,158 @@
+﻿<Window x:Class="MeineSammlungen_2.Modul_MikroMakro.AddMikroMakro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MeineSammlungen_2.Modul_MikroMakro"
+        mc:Ignorable="d"
+        Title="AddMikroMakro" Height="800" Width="800" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="DimGray" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Margin"  Value="4 2 2 2"/>
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="DemiBold"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Label Content="Grunddaten" FontWeight="Bold" FontSize="14" />
+        <Label Grid.Column="1" Content="Details" FontWeight="Bold" FontSize="14" />
+        <Label x:Name="LblImgCount" Grid.Column="2" Content="Anzahl Bilder: " FontWeight="Bold" FontSize="14" />
+
+        <StackPanel Grid.Row="01" Grid.Column="0" Background="AliceBlue">
+            <Label Name="lblObjektNr" Content="Objekt-Nr.: " FontWeight="Bold"/>
+            <Label Content="Objekt"/>
+            <TextBox x:Name="ObjektText"/>
+            <Label Content="Detail"/>
+            <TextBox x:Name="DetailText" />
+            <Label Content="Ablageort"/>
+            <TextBox x:Name="AblageortText" />
+            <Label Content="Ablage ändern"/>
+            <!--<ComboBox x:Name="cbAblage"  SelectionChanged="cbAblage_SelectionChanged" SelectedValuePath="ID"  />-->
+            <ComboBox x:Name="cbAblage" ItemsSource="{Binding abl}" Margin="5"
+                      SelectedValuePath="ID" StaysOpenOnEdit="True" SelectionChanged="cbAblage_SelectionChanged_1">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Ablageort}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Label Content="Erstellt"/>
+            <TextBox x:Name="ErstelltText"/>
+            <Label Content="Geändert"/>
+            <TextBox x:Name="GeaendertText"/>
+            <Label Content="Bemerkung"/>
+            <TextBox x:Name="BemerkungText" TextWrapping="Wrap"/>
+            <CheckBox x:Name="ckbWeitereBearbeitung" Content="Bearbeitung erforderlich" Margin="5"/>
+        </StackPanel>
+        <StackPanel x:Name="ucPanel" Grid.Row="1" Grid.Column="1" Background="Azure">
+            <Label Content="Schnittebene"/>
+            <TextBox x:Name="SchnittText" />
+            <Label Content="Schnittart"/>
+            <TextBox x:Name="SchnittartText" />
+            <Label Content="Färbung"/>
+            <TextBox x:Name="FarbeText" />
+            <Label Content="Aufhellung"/>
+            <TextBox x:Name="HellText" />
+            <Label Content="Fixierung"/>
+            <TextBox x:Name="FixierungText" />
+            <Label Content="Einschlussmittel"/>
+            <TextBox x:Name="EinschlussText" />
+            <Label Content="Hinweise"/>
+            <TextBox x:Name="HinweiseText"
+                        TextWrapping="Wrap"/>
+           
+        </StackPanel>
+        <Border Margin="5 5 0 5" Grid.Column="2" Grid.Row="1" BorderBrush="DimGray" BorderThickness="1">
+            <ScrollViewer>
+                <Grid>
+                    <!--<Grid.Resources>
+                            <local:PictureList x:Key="pictureList" />
+                        </Grid.Resources>-->
+                    <ListBox x:Name="imgListBox" SelectionChanged="imgListBox_SelectionChanged" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="10,10,10,10" >
+                                    <Image Source="{Binding Path=BitmapImage}" Width="100" />
+                                    <!--<StackPanel Margin="10,0,0,0">
+                                        <TextBlock Text="{Binding Path=Name}" FontSize="22"/>
+                                        <TextBlock Text="{Binding Path=FileType}"/>
+                                        <TextBlock Text="{Binding Path=DateCreated}"/>
+                                        <TextBlock x:Name="selImg"  Text="{Binding Path=Path}"/>
+                                    </StackPanel>-->
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </ScrollViewer>
+        </Border>
+        <Grid Grid.Row="1" Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Background="Bisque">
+                <Label Content="IPTC-Daten" FontWeight="Bold" />
+                <Label Content="Objekt"/>
+                <TextBlock x:Name="txtObject"/>
+                <Label Content="Detail"/>
+                <TextBlock x:Name="txtDetail"/>
+                <Label Content="Quelle"/>
+                <TextBlock x:Name="txtQuelle"/>
+                <Label Content="Ort"/>
+                <TextBlock x:Name="txtOrt"/>
+                <Label Content="Bemerkung"/>
+                <TextBlock x:Name="txtBemerkung"/>
+                <Label Content="Stichworte"/>
+                <TextBlock x:Name="txtStichworte"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Background="Beige">
+                <Label Content="EXIF-Daten" FontWeight="Bold" />
+                <Label Content="Kamera"/>
+                <TextBlock x:Name="txtKamera"/>
+                <Label Content="Blende"/>
+                <TextBlock x:Name="txtBlende"/>
+                <Label Content="Belichtung"/>
+                <TextBlock x:Name="txtBelichtung"/>
+                <Label Content="ISO"/>
+                <TextBlock x:Name="txtIso"/>
+                <Label Content="Brennweite"/>
+                <TextBlock x:Name="txtBrennweite"/>
+                <Label Content="Aufnahmedatum"/>
+                <TextBlock x:Name="txtAufnahmeDat"/>
+            </StackPanel>
+        </Grid>
+        <Button Grid.Column="0" Grid.Row="2" Content="Übernehmen" Click="Btn_Save_Click"/>
+
+        <UniformGrid Grid.Row="2" Grid.Column="2" Columns="2">
+            <Button Content="Bild neu" Name="NewImb" Click="Btn_Img_new"/>
+            <Button  Content="Bild löschen" Name="DelImg" Click="Btn_DelImg"/>
+        </UniformGrid>
+        <Button Grid.Column="1" Grid.Row="2" Content="Zurück ohne Änderung" Click="Btn_Return_click"/>
+        <Button Grid.Column="3" Grid.Row="2" Content="IPTC Ändern" Click="Btn_ChangeIPTC_click"/>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,49 @@
+﻿<Page x:Class="MeineSammlungen_2.Modul_MikroMakro.PageMikroMakro"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MeineSammlungen_2.Modul_MikroMakro"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="400"
+      Title="PageMikroMakro" Loaded="Page_Loaded" >
+
+    <Page.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="13" />
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Margin"  Value="4 2 2 2"/>
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontWeight" Value="DemiBold"/>
+        </Style>
+    </Page.Resources>
+    <Grid Background="AliceBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="197*"/>
+            <ColumnDefinition Width="603*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="ucPanel" Grid.Row="0" Grid.ColumnSpan="2" Background="LightSteelBlue" Loaded="ucPanel_Loaded" >
+            <Label Content="Deteils Mikro-Makro" FontWeight="Bold" Margin="0 0 0 10"/>
+            <Label Content="Schnittebene"/>
+            <TextBlock x:Name="SchnittText" />
+            <Label Content="Schnittart"/>
+            <TextBlock x:Name="SchnittartText" />
+            <Label Content="Färbung"/>
+            <TextBlock x:Name="FarbeText" />
+            <Label Content="Aufhellung"/>
+            <TextBlock x:Name="HellText" />
+            <Label Content="Fixierung"/>
+            <TextBlock x:Name="FixierungText" />
+            <Label Content="Einschlussmittel"/>
+            <TextBlock x:Name="EinschlussText" />
+            <Label Content="Hinweise"/>
+            <TextBlock x:Name="HinweiseText"
+                        TextWrapping="Wrap"
+                       
+                        />
+        </StackPanel>
+    </Grid>
+</Page>

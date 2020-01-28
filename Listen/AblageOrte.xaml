@@ -1,0 +1,30 @@
+﻿<Window x:Class="MeineSammlungen_2.Listen.AblageOrte"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MeineSammlungen_2.Listen"
+        mc:Ignorable="d"
+        Title="AblageOrte" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Name="DGAblage" AutoGenerateColumns="False">
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="ID" Binding="{Binding Path=ID}"/>
+                <DataGridTextColumn Header="Ablageort" Binding="{Binding Path=Ablageort}"/>
+                <DataGridTextColumn Header="Beschreibung" Binding="{Binding Path=Beschreibung}"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <StackPanel Grid.Column="1">
+            <Button Height="30" Content="Ablgeorte ändern" Margin="20" Click="Button_Click_Info"/>
+            <Button Height="30" Content="Ablageort löschen" Margin="20" Click="Button_Click_Delete"/>
+            <Button Height="30" Content="Ablageort neu" Margin="20" Click="Button_Click_new" />
+          
+            <Button Height="30" Content="Zurück" Margin="40" Click="Button_cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

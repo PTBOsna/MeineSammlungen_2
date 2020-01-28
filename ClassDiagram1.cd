@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MeineSammlungen_2.Admin.Admin" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAIAACQAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Admin\Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.Admin.Picture" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIgAAAAAAAAIAAAAAAAQAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Admin\PictueList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.Admin.PictureList" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Admin\PictueList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.App" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.SammlungDataClassDataContext" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAYEkAAgQAAAIAIAAAKEAAIACTIBAgAggoACQAACQE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.Bilder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAggAAhBEIkgAAwQAGEgAQBqiAEAEQECBJAEQhMUAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MeineSammlungen_2.Settings" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAABAAAAgAAAQAEEAAABiCQAAgAAABAAAAAEAAg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MeineSammlungen_2.Bildtyp" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgAAABBAAEgACAQAEEgAABqCAAAAAEABAAAAAEIAA=</HashCode>
+      <FileName>SammlungDataClass.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MeineSammlungen_2.Exponate" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AVQggAABAAAgggAIQAFEUTgBiDQABUgQABRAAAAEAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MeineSammlungen_2.Grunddaten" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAkABAJIBAA0AAhRBkEiAgB6CCEAERAATAgKAAEGAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MeineSammlungen_2.Module" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAEAJAAAAgAAAQAEEAAgBiCAAAAAAEBAACAAEBAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MeineSammlungen_2.ModulMikro" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAgggMLBAAQggQIhQIEGHAwRiCAgAEAAABFAEANEAEA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MeineSammlungen_2.ShowImage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>ShowImage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MeineSammlungen_2.ShowIPTC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAEAAAAEAAgABAkAAQAIAAQAAAAAAAAAAEA=</HashCode>
+      <FileName>ShowIPTC.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MeineSammlungen_2.Start" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAEIgAACQAAAAAAAAgAAgoAAABAAAAACIAYCAASAAA=</HashCode>
+      <FileName>Start.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MeineSammlungen_2.ImgHandling.ExifDaten" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAEAAAAAAAAAAAAAEAAAAgAAIAAAAQ=</HashCode>
+      <FileName>ImgHandling\MetaDaten.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.ImgHandling.EXIF" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ImgHandling\MetaDaten.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.ImgHandling.IPTC_Const" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABgAEACAAAAAAAEACAEAAAAAAAAQQAAACCAgAAAAAAg=</HashCode>
+      <FileName>ImgHandling\MetaDaten.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.ImgHandling.myIPTCDaten" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQABAAMAAAgAAQACAAAAAYAQAAAgAAkAgAAAAAA=</HashCode>
+      <FileName>ImgHandling\MetaDaten.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.ImgHandling.IPTCDaten" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQABAAMAAAgAAQACAAAAAYAQAAAgAAkAgAAAEAA=</HashCode>
+      <FileName>ImgHandling\MetaDaten.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.Modul_Exponate.AddEditExponate" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAFgAAAAAAAAAAAAAAAAAgAACAKAAgAAABAACAAADI=</HashCode>
+      <FileName>Modul_Exponate\AddEditExponate.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MeineSammlungen_2.Modul_Exponate.currExp" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAQAAAAAAAAQAAAAAAAQAAAAAIgAAQAA=</HashCode>
+      <FileName>Modul_Exponate\currExp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.Modul_Exponate.editEx" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modul_Exponate\currExp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.Modul_Exponate.PageExponate" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modul_Exponate\PageExponate.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MeineSammlungen_2.Modul_Grunddaten.currGD" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQEAAAAAIAAIAAAAAAAIAAAAAAAADBAAIAAAAAAA=</HashCode>
+      <FileName>Modul_Grunddaten\currGD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.Modul_Grunddaten.editGD" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modul_Grunddaten\currGD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.Modul_MikroMakro.AddMikroMakro" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAFgAAAAAAAAAAAAAAAAAgAACACAAgAAABAACAAADI=</HashCode>
+      <FileName>Modul_MikroMakro\AddMikroMakro.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MeineSammlungen_2.Modul_MikroMakro.currMM" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modul_MikroMakro\currMM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.Modul_MikroMakro.PageMikroMakro" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modul_MikroMakro\PageMikroMakro.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MeineSammlungen_2.Properties.Resources" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeineSammlungen_2.Properties.Settings" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

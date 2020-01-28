@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SasmmlungMS" Class="SammlungDataClassDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=SasmmlungMS;Integrated Security=True" SettingsObjectName="MeineSammlungen_2.Properties.Settings" SettingsPropertyName="SasmmlungMSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Bilder" Member="Bilder">
+    <Type Name="Bilder">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Grunddaten_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BildTyp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Beschreibung" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Erstellt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bearbeitet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Objektiv" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Okular" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Settings" Member="Settings">
+    <Type Name="Settings">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Bildpfad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bildtyp" Member="Bildtyp">
+    <Type Name="Bildtyp">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Bildtyp" Member="Bildtyp1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Beschreibung" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Exponate" Member="Exponate">
+    <Type Name="Exponate">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Fundstelle_Land" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fundstelle_Ort" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Koordinaten" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Hinweise" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Grunddaten_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fund_Datum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Module" Member="Module">
+    <Type Name="Module">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Modul" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Grunddaten_Module" Member="Grunddaten" ThisKey="ID" OtherKey="Modul" Type="Grunddaten" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ModulMikro" Member="ModulMikro">
+    <Type Name="ModulMikro">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Schnittebene" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Schnittart" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Farbung" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Aufhellung" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fixierung" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Einschluss" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Hineise" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Grunddaten_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ablage" Member="Ablage">
+    <Type Name="Ablage">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ablageort" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Beschreibung" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mineralien" Member="Mineralien">
+    <Type Name="Mineralien">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Fundstelle_Land" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fundstelle_Ort" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Koordinaten" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Hinweise" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Grunddaten_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fund_Datum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gewicht" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Volumen" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Dichte" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Zusammensetzung" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Grunddaten" Member="Grunddaten">
+    <Type Name="Grunddaten">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LfdNr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Modul" Type="System.Int32" DbType="Int" CanBeNull="false" />
+      <Column Name="Nr" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Objekt" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Detail" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Bemerkung" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Ablageort" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Ablageort_neu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Erstellt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Geaendert" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Checked" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ImgCount" Type="System.Int32" DbType="Int" CanBeNull="false" />
+      <Association Name="Grunddaten_Module" Member="Module" ThisKey="Modul" OtherKey="ID" Type="Module" />
+    </Type>
+  </Table>
+</Database>

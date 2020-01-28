@@ -1,0 +1,52 @@
+﻿<Page x:Class="MeineSammlungen_2.Modul_Mineral.PageMineral"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MeineSammlungen_2.Modul_Mineral"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      Title="PageMineral" Loaded="Page_Loaded">
+
+    <Page.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="13" />
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Margin"  Value="4 2 2 2"/>
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontWeight" Value="DemiBold"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="203*"/>
+            <ColumnDefinition Width="60*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel  Name="PN2" Background="#CCADBEEA" Grid.ColumnSpan="2">
+            <Label Content="Deteils Mineralien" FontWeight="Bold" Margin="0 0 0 10"/>
+            <Label Content="Fundstelle (Ort)"/>
+            <TextBlock x:Name="OrtTExt" />
+            <Label Content="Fundstelle (Land)"/>
+            <TextBlock x:Name="LandText" />
+            <Label Content="Koordinaten"/>
+            <TextBlock x:Name="KoordinatenText" />
+            <Label Content="Fund-Datum"/>
+            <TextBlock x:Name="FunddatumText" />
+            <Label Content="Zusammensetzung"/>
+            <TextBlock x:Name="Zusammensetzung"  TextWrapping="Wrap" />
+            <Label Content="Gewicht (g)"/>
+            <TextBlock x:Name="Gewicht" />
+            <Label Content="Volumen (cm³)"/>
+            <TextBlock x:Name="Volumen" />
+            <Label Content="Dichte (g/cm³)"/>
+            <TextBlock x:Name="Dichte" />
+            <Label Content="Hinweise"/>
+            <TextBlock x:Name="HinweiseExpoText"
+                        TextWrapping="Wrap"/>
+        </StackPanel>
+
+    </Grid>
+</Page>
